@@ -1,5 +1,7 @@
 import React from "react";
 import { Button, Dropdown, Menu,Container } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+
 
 export default function Navi() {
   return (

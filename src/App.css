@@ -5,3 +5,10 @@
   color: fade(#eb6510, 80%);
   background: black ;
 }
+
+
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  }
