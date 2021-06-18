@@ -1,8 +1,12 @@
-import axios from "axios"
+import { api } from "../api"
 
 
 export default class CandidateService{
     getCandidate(){
-        return axios.get("http://localhost:8080/api/candidates/getall")
+        return api().get("/candidates/getall")
+    }
+
+    addCandidate(candidate){
+        return api().post("/candidates/add",candidate)
     }
 }

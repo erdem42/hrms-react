@@ -6,9 +6,17 @@
   background: black ;
 }
 
+form {
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 
-.footer{
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  }
+input,
+select,
+textarea,
+button {
+  margin: 0 0 10px 0;
+  padding: 7px;
+}
