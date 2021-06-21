@@ -5,11 +5,12 @@ import Candidate from "../pages/users/Candidate";
 import Employer from "../pages/users/Employer";
 import Navi from "./Navi";
 import { Grid, Menu, Label, Input } from "semantic-ui-react";
-import JobPositionList from "../pages/JopPositionList";
-import JobAdvertisementList from "../pages/JobAdvertisementList";
-import ResumeList from "../pages/ResumeList";
+import JobPositionList from "../pages/jobPosition/JopPositionList";
+import JobAdvertisementList from "../pages/jobAdvertisement/JobAdvertisementList";
+import ResumeList from "../pages/resume/ResumeList";
 import { useState } from "react";
-import AddJobAdvertisement from "../pages/adds/AddJobAdvertisement";
+import AddJobAdvertisement from "../pages/jobAdvertisement/AddJobAdvertisement";
+import CityList from "../pages/city/CityList";
 
 export default function Dashboard() {
   return (
@@ -52,6 +53,9 @@ export default function Dashboard() {
                 <Label color="teal">1</Label>
                 <Link to={`/jobpositions`}>Job Positions</Link>
               </Menu.Item>
+             
+
+            
               <Menu.Item
                 name="inbox"
                 // active={activeItem === 'inbox'}
@@ -60,9 +64,27 @@ export default function Dashboard() {
                 <Label color="teal">1</Label>
                 <Link to={`/resumes`}>Resumes</Link>
               </Menu.Item>
+              <Menu.Item
+                name="inbox"
+                // active={activeItem === 'inbox'}
+                // onClick={this.handleItemClick}
+              >
+                <Label color="teal">1</Label>
+                <Link to={`/cities`}>Cities</Link>
+              </Menu.Item>
+              <Menu.Item
+                name="spam"
+                // active={activeItem === 'spam'}
+                // onClick={this.handleItemClick}
+              >
+                <Label>51</Label>
+                <Link to={`/addjobadvertisement`}>Add Job Ad</Link>
+              </Menu.Item>
               <Menu.Item>
                 <Input icon="search" placeholder="Search mail..." />
               </Menu.Item>
+              
+              
             </Menu>
           </Grid.Column>
 
@@ -73,6 +95,7 @@ export default function Dashboard() {
             <Route path="/resumes" component={ResumeList} />
             <Route path="/jobpositions" component={JobPositionList} />
             <Route path="/addjobadvertisement" component={AddJobAdvertisement} />
+            <Route path="/cities" component={CityList} />
 
           </Grid.Column>
         </Grid.Row>
