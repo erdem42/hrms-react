@@ -9,4 +9,8 @@ export default class CandidateService{
     addCandidate(candidate){
         return api().post("/candidates/add",candidate)
     }
+
+      deleteCandidate(candidate){
+        return api().post("/candidates/add",candidate)
+    }
 }

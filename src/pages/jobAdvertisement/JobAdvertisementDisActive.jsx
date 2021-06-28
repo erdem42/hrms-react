@@ -4,7 +4,8 @@ import { Button, Card, Image } from 'semantic-ui-react'
 
 export default function JobAdvertisementDisActive() {
 
-  
+  //boolean isActive- active
+  //Boolean isActive-isActive
 
   const [disActiveJobAdvertisements, setDisActiveJobAdvertisements] = useState([]);
     let jobAdvertisementService = new JobAdvertisementService();
@@ -18,20 +19,22 @@ export default function JobAdvertisementDisActive() {
 
   const [state, setstate] = useState(false)
 
-  function handleActive(jobAdvertisementId){
-   jobAdvertisementService.confirmJobAdvertisement(true,jobAdvertisementId)
-   setstate(true)
+  function handleActive(id){
+   jobAdvertisementService.confirmJobAdvertisement(true,id)
+    
+   
   }
   function handleDisActive(jobAdvertisementId){
     jobAdvertisementService.confirmJobAdvertisement(false,jobAdvertisementId)
-    setstate(false)
+
+
   }
 
   return (
     <div>
 
 {disActiveJobAdvertisements.map((d)=>(
-
+ 
 <Card>
         <Card.Content>
           <Image
@@ -52,7 +55,8 @@ export default function JobAdvertisementDisActive() {
         <Card.Content extra>
           {/* <div className="ui two buttons"> */}
            { 
-         (state)?<Button onClick={()=>handleDisActive(d.jobAdvertisementId)}  color="green">
+          
+         d.active?<Button onClick={()=>handleDisActive(d.jobAdvertisementId)}  color="green">
               İlan Aktif 
             </Button>:
             <Button onClick={()=>handleActive(d.jobAdvertisementId)} basic color="red">

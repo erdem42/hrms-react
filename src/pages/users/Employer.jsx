@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Employer() {
 
-    const [employers, setEmployers] = useState([]);
+  const [employers, setEmployers] = useState([]);
 
   useEffect(() => {
     let employerService = new EmployerService();
